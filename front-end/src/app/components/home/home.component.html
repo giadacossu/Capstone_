@@ -1,0 +1,22 @@
+<header>
+  <img src="https://d1dn9atxuly58a.cloudfront.net/fotografieitalia/foto/5187/5187-12-02-40-1511.jpg"
+    alt="immagine mare">
+
+  <h1 class="display-2 text-light">Vieni a scoprire la Sardegna</h1>
+
+</header>
+
+
+<div class="container">
+  <h3>Scopri le citta</h3>
+
+  <div class="cFoto ">
+    <div class="card d-flex" *ngFor="let d of Data$ |async" routerLink="{{d.nome}}">
+      <img src="{{d.url}}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h2>{{d.nome}}</h2>
+      </div>
+    </div>
+  </div>
+
+</div>

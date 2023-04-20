@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color:  honeydew;
+.container{
+  display: flex!important;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+h3{
+
+
+}
+  form {
+    padding: 70px;
+    width: 400px;
+    height: 600px;
+    margin: 30px;
+    text-align: center;
+    background-color: aliceblue;
+    button {
+      margin-top: 20px;
+      width: 150px;
+    }
+  }
+}

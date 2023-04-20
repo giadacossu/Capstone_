@@ -1,0 +1,120 @@
+<body >
+
+  <div class="container ">
+    <form #a="ngForm" (ngSubmit)="SubmitC(a)">
+      <h3>Aggiungi le città</h3>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Nome citta</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="nome" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">provincia</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="provincia" />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">inserisci l'url di una foto</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="url" />
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!a.valid">
+        crea
+      </button>
+    </form>
+
+
+
+    <form #b="ngForm" (ngSubmit)="SubmitPi(b)">
+      <h3>Aggiungi piatti Tipici</h3>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Nome piatto</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="nome" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Descrizione</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="descrizione" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Citta d'origine</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="citta" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Inserisci l'url di una foto</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="url" />
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!b.valid">
+        crea
+      </button>
+    </form>
+  </div>
+
+  <div class="container">
+
+    <form #f="ngForm" (ngSubmit)="SubmitP(f)">
+      <h3>Aggiungi luoghi</h3>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Nome
+        </label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="nome" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Descrizione</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="descrizione" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">citta
+        </label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="citta" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Inserisci l'url di una foto</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="url" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">come arrivarci</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="percorso" />
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!f.valid">
+        crea
+      </button>
+    </form>
+
+
+    <form #e="ngForm" (ngSubmit)="SubmitS(e)">
+      <h3>Aggiungi Spiagge</h3>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Nome Spiaggia
+        </label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="nome" required />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Descrizione</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="descrizione" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">dove si trova
+        </label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="citta" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Inserisci l'url di una foto</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="url" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">come arrivarci</label>
+        <input class="form-control" id="exampleFormControlTextarea1" rows="1" ngModel name="percorso" />
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!e.valid">
+        crea
+      </button>
+    </form>
+  </div>
+
+</body>

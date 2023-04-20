@@ -1,0 +1,25 @@
+.footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 150px;
+  background-color: black;
+  height: 300px;
+  width: 100%;
+  .primo{
+    img{
+
+    }
+  }
+  .secondo{
+
+  font-size: 30px;
+  p{
+     margin-left: 50px;
+  }
+    a{
+      margin: 50px;
+
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<header>
+  <div *ngFor="let item of Data$ | async">
+    <img *ngIf="item.nome == 'olbia'" src="{{ item.url }}" alt="" />
+    <h2 *ngIf="item.nome == 'olbia'" class="display-2 text-white">
+      {{ item.nome }}
+    </h2>
+  </div>
+</header>
+
+<div class="parteInfe">
+  <h3>Cosa vedere</h3>
+  <div class="point">
+    <div (mouseenter)="onCardMouseEnter()" (mouseleave)="onCardMouseLeave()"  class="card rounded-0" style="width: 18rem" *ngFor="let item of point">
+      <img src="{{ item.url }}"class="card-img-top rounded-0" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ item.nome }}</h5>
+        <div class="icone">
+        <i class="bi bi-info-circle"></i>
+        <p *ngIf="onOver" class="hide">{{ item.descrizione }}</p>
+        <i class="bi bi-signpost"></i>
+        <p *ngIf="onOver" class="hide">{{ item.percorso }}</p>
+        <i class="bi bi-clock"></i>
+        <p *ngIf="onOver" class="hide">{{ item.orario }}</p>
+        <i class="bi bi-cash-coin"></i>
+        <p *ngIf="onOver"class="hide">{{ item.pagamento }}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <h3>Cosa Mangiare</h3>
+
+  <div class="point">
+    <div (mouseenter)="onCardMouseEnter()" (mouseleave)="onCardMouseLeave()"  class="card rounded-0" style="width: 18rem" *ngFor="let piatto of piatti">
+      <img src="{{ piatto.url }}" class="card-img-top rounded-0" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ piatto.nome }}</h5>
+        <div class="icone">
+        <i class="bi bi-info-circle"></i>
+        <p *ngIf="onOver" class="hide">{{ piatto.descrizione }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3>Spiagge</h3>
+
+  <div class="point">
+    <div (mouseenter)="onCardMouseEnter()" (mouseleave)="onCardMouseLeave()"  class="card rounded-0" style="width: 18rem" *ngFor="let spiaggia of spiagge">
+      <img src="{{ spiaggia.url }}" class="card-img-top rounded-0" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ spiaggia.nome }}</h5>
+
+        <div class="icone">
+          <i class="bi bi-info-circle"></i>
+          <p *ngIf="onOver" class="hide">{{ spiaggia.descrizione }}</p>
+          <i class="bi bi-signpost"></i>
+          <p *ngIf="onOver" class="hide">{{ spiaggia.percorso }}</p>
+          <i *ngIf="spiaggia.tipicamenteAffollata" class="bi bi-fire"></i>
+          <p *ngIf="onOver" class="hide">Tipicamente Affollata</p>
+          <i
+            *ngIf="spiaggia.accesibileDisabili"
+            class="bi bi-hand-thumbs-up"
+          ></i>
+          <p *ngIf="onOver" class="hide">accessibile ai disabili</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

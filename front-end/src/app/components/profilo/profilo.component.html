@@ -1,0 +1,81 @@
+<div class="dati">
+  <h2>I tuoi dati</h2>
+  <label for="">nome</label>
+
+  <p>{{ this.user.name }}</p>
+  <label for="">ursername</label>
+  <p>{{ this.user.username }}</p>
+  <label for="">email</label>
+  <p>{{ this.user.email }}</p>
+  <button type="submit" class="btn btn-primary" (click)="logout()">
+    logout
+  </button>
+</div>
+
+<div class="m-3">
+  <h2>citta create</h2>
+  <div class="c" *ngIf="cCreate">
+    <div class="card" *ngFor="let dato of this.cCreate"  (mouseenter)="onCardMouseEnter()" (mouseleave)="onCardMouseLeave()">
+      <img src="{{ dato.url }}" class="card-img-top rounded-0" alt="..." />
+
+      <div class="card-body">
+        <h5 class="card-title">{{ dato.nome }} <i class="bi bi-trash3" *ngIf="onOver" (click)="delete(dato.id)"></i></h5>
+        <div  class="icone border">
+          <i class="bi bi-info-circle"></i>
+          <p *ngIf="onOver"  class="hide">{{ dato.descrizione }}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="m-3">
+  <h2>Luoghi creati</h2>
+  <div class="c" *ngIf="point">
+    <div class="card" *ngFor="let dato of this.point"  (mouseenter)="onCardMouseEnter()" (mouseleave)="onCardMouseLeave()">
+      <img src="{{ dato.url }}" class="card-img-top rounded-0" alt="..." />
+
+      <div class="card-body">
+        <h5 class="card-title">{{ dato.nome }}</h5>
+        <div  class="icone border">
+          <i class="bi bi-info-circle"></i>
+          <p *ngIf="onOver"  class="hide">{{ dato.descrizione }}</p>
+          <i class="bi bi-signpost"></i>
+          <p  *ngIf="onOver" class="hide">{{ dato.percorso }}</p>
+          <i class="bi bi-clock"></i>
+          <p  *ngIf="onOver" class="hide">{{ dato.orario }}</p>
+          <i class="bi bi-cash-coin"></i>
+          <p *ngIf="onOver" class="hide">{{ dato.pagamento }}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="m-3">
+  <h2>Piatti creati</h2>
+  <div class="c" *ngIf="piatti">
+    <div class="card" *ngFor="let dato of this.piatti"  (mouseenter)="onCardMouseEnter()" (mouseleave)="onCardMouseLeave()">
+      <img src="{{ dato.url }}" class="card-img-top rounded-0" alt="..." />
+
+      <div class="card-body">
+        <h5 class="card-title">{{ dato.nome }}</h5>
+        <div  class="icone border">
+          <i class="bi bi-info-circle"></i>
+          <p *ngIf="onOver"  class="hide">{{ dato.descrizione }}</p>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="m-3">
+  <h2>Spiagge create</h2>
+  <div class="c" *ngIf="spiagge">
+    <div class="card" *ngFor="let dato of this.spiagge"  (mouseenter)="onCardMouseEnter()" (mouseleave)="onCardMouseLeave()">
+      <img src="{{ dato.url }}" class="card-img-top rounded-0" alt="..." />
+
+      <div class="card-body">
+        <h5 class="card-title">{{ dato.nome }}</h5>
+      </div>
+    </div>
+  </div>
+</div>
